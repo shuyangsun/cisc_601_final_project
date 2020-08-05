@@ -1,0 +1,91 @@
+/Users/shuyangsun/Developer/cisc_601_final_project/numerical_integration_cpp/cmake-build-release/NumericalIntegration
+2020-08-05T18:43:38-04:00
+Running /Users/shuyangsun/Developer/cisc_601_final_project/numerical_integration_cpp/cmake-build-release/NumericalIntegration
+Run on (8 X 4000 MHz CPU s)
+CPU Caches:
+  L1 Data 32 KiB (x4)
+  L1 Instruction 32 KiB (x4)
+  L2 Unified 256 KiB (x4)
+  L3 Unified 8192 KiB (x1)
+Load Average: 3.05, 2.36, 2.22
+-----------------------------------------------------------------
+Benchmark                       Time             CPU   Iterations
+-----------------------------------------------------------------
+BM_Trapezoidal_f32/1        0.000 ns        0.000 ns   1000000000
+BM_Trapezoidal_f32/2        0.362 ns        0.360 ns   1000000000
+BM_Trapezoidal_f32/5         1.78 ns         1.78 ns    391205696
+BM_Trapezoidal_f32/10        3.81 ns         3.78 ns    189638170
+BM_Trapezoidal_f32/20        8.84 ns         8.81 ns     75059780
+BM_Trapezoidal_f32/30        15.5 ns         15.5 ns     44401593
+BM_Trapezoidal_f32/40        22.8 ns         22.7 ns     30553676
+BM_Trapezoidal_f32/50        33.9 ns         33.8 ns     20666342
+BM_Trapezoidal_f32/60        43.0 ns         43.0 ns     16257746
+BM_Trapezoidal_f32/70        53.1 ns         53.1 ns     13107387
+BM_Trapezoidal_f32/80        87.6 ns         87.5 ns      7945246
+BM_Trapezoidal_f32/90        90.5 ns         90.4 ns      7601425
+BM_Trapezoidal_f32/100        106 ns          106 ns      6613257
+BM_Trapezoidal_f64/1        0.000 ns        0.000 ns   1000000000
+BM_Trapezoidal_f64/2        0.443 ns        0.443 ns   1000000000
+BM_Trapezoidal_f64/5         1.77 ns         1.77 ns    397363775
+BM_Trapezoidal_f64/10        3.62 ns         3.62 ns    193575506
+BM_Trapezoidal_f64/20        7.88 ns         7.88 ns     89347254
+BM_Trapezoidal_f64/30        14.6 ns         14.6 ns     47632009
+BM_Trapezoidal_f64/40        22.7 ns         22.7 ns     30480769
+BM_Trapezoidal_f64/50        33.7 ns         33.7 ns     20670492
+BM_Trapezoidal_f64/60        44.1 ns         44.0 ns     15897529
+BM_Trapezoidal_f64/70        53.2 ns         53.1 ns     13204059
+BM_Trapezoidal_f64/80        69.9 ns         69.4 ns     10354570
+BM_Trapezoidal_f64/90        79.7 ns         79.6 ns      8570029
+BM_Trapezoidal_f64/100        107 ns          107 ns      6525650
+BM_Simpson13_f32/1          0.000 ns        0.000 ns   1000000000
+BM_Simpson13_f32/2          0.348 ns        0.348 ns   1000000000
+BM_Simpson13_f32/5           1.77 ns         1.76 ns    395321651
+BM_Simpson13_f32/10          3.63 ns         3.63 ns    191522660
+BM_Simpson13_f32/20          8.30 ns         8.29 ns     72787772
+BM_Simpson13_f32/30          15.4 ns         15.3 ns     45650487
+BM_Simpson13_f32/40          22.7 ns         22.7 ns     30938680
+BM_Simpson13_f32/50          33.8 ns         33.8 ns     20719806
+BM_Simpson13_f32/60          43.1 ns         43.1 ns     16262467
+BM_Simpson13_f32/70          53.4 ns         53.3 ns     13155175
+BM_Simpson13_f32/80          87.6 ns         87.5 ns      7942091
+BM_Simpson13_f32/90          92.7 ns         92.3 ns      7445620
+BM_Simpson13_f32/100          107 ns          107 ns      6564141
+BM_Simpson13_f64/1          0.000 ns        0.000 ns   1000000000
+BM_Simpson13_f64/2          0.470 ns        0.468 ns   1000000000
+BM_Simpson13_f64/5           1.78 ns         1.78 ns    393698573
+BM_Simpson13_f64/10          3.63 ns         3.62 ns    192850747
+BM_Simpson13_f64/20          7.87 ns         7.86 ns     88719899
+BM_Simpson13_f64/30          14.6 ns         14.6 ns     47823681
+BM_Simpson13_f64/40          22.7 ns         22.6 ns     30879447
+BM_Simpson13_f64/50          33.8 ns         33.8 ns     20725020
+BM_Simpson13_f64/60          44.1 ns         44.1 ns     15899623
+BM_Simpson13_f64/70          53.4 ns         53.3 ns     13020107
+BM_Simpson13_f64/80          67.8 ns         67.7 ns     10242903
+BM_Simpson13_f64/90          79.1 ns         79.0 ns      8839500
+BM_Simpson13_f64/100          107 ns          107 ns      6536924
+BM_Simpson38_f32/1          0.000 ns        0.000 ns   1000000000
+BM_Simpson38_f32/2          0.347 ns        0.347 ns   1000000000
+BM_Simpson38_f32/5           1.77 ns         1.76 ns    395268076
+BM_Simpson38_f32/10          3.63 ns         3.63 ns    192097651
+BM_Simpson38_f32/20          9.05 ns         9.03 ns     87767691
+BM_Simpson38_f32/30          15.4 ns         15.4 ns     45719959
+BM_Simpson38_f32/40          22.7 ns         22.6 ns     30952223
+BM_Simpson38_f32/50          33.8 ns         33.8 ns     20647445
+BM_Simpson38_f32/60          43.1 ns         43.1 ns     16282781
+BM_Simpson38_f32/70          53.3 ns         53.2 ns     13103706
+BM_Simpson38_f32/80          87.9 ns         87.8 ns      7985125
+BM_Simpson38_f32/90          90.3 ns         90.2 ns      7776741
+BM_Simpson38_f32/100          106 ns          106 ns      6598171
+BM_Simpson38_f64/1          0.000 ns        0.000 ns   1000000000
+BM_Simpson38_f64/2          0.443 ns        0.442 ns   1000000000
+BM_Simpson38_f64/5           1.77 ns         1.77 ns    396203241
+BM_Simpson38_f64/10          3.62 ns         3.62 ns    193875742
+BM_Simpson38_f64/20          8.03 ns         7.95 ns     89367787
+BM_Simpson38_f64/30          14.6 ns         14.6 ns     47661846
+BM_Simpson38_f64/40          22.8 ns         22.8 ns     30919411
+BM_Simpson38_f64/50          34.0 ns         33.8 ns     20724898
+BM_Simpson38_f64/60          44.1 ns         44.0 ns     15870137
+BM_Simpson38_f64/70          53.3 ns         53.2 ns     13128528
+BM_Simpson38_f64/80          67.9 ns         67.8 ns     10352579
+BM_Simpson38_f64/90          79.6 ns         79.6 ns      8707226
+BM_Simpson38_f64/100          107 ns          107 ns      6541017

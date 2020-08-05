@@ -128,7 +128,7 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-cmake-build-debug
+cmake-build-*
 numerical_integration_rust/target
 .idea
 .vscode

@@ -23,7 +23,7 @@ namespace numerical_integration {
 
     template<typename T>
     inline T trapezoidal(T (* const func)(T const), size_t const n, T const left, T const right) {
-        T res{ (func(left) + func(right)) / 2.0 };
+        T res{ (func(left) + func(right)) / T(2.0) };
         T const delta{ (right - left) / n };
         T cur{ left + delta };
         while (cur < right) {
@@ -35,7 +35,7 @@ namespace numerical_integration {
 
     template<typename T>
     inline T simpson_1_3(T (* const func)(T const), size_t const n, T const left, T const right) {
-        T res{ (func(left) + func(right)) / 2.0 };
+        T res{ (func(left) + func(right)) / T(2.0) };
         T const delta{ (right - left) / n };
         T cur{ left + delta };
         for (size_t i = 0; cur < right; ++i) {
@@ -47,7 +47,7 @@ namespace numerical_integration {
 
     template<typename T>
     inline T simpson_3_8(T (* const func)(T const), size_t const n, T const left, T const right) {
-        T res{ (func(left) + func(right)) / 2.0 };
+        T res{ (func(left) + func(right)) / T(2.0) };
         T const delta{ (right - left) / n };
         T cur{ left + delta };
         for (size_t i = 0; cur < right; ++i) {
