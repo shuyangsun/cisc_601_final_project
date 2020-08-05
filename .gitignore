@@ -129,6 +129,6 @@ dmypy.json
 .pyre/
 
 cmake-build-debug
-integration_rust/target
+numerical_integration_rust/target
 .idea
 .vscode
