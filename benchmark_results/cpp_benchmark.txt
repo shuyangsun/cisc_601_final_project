@@ -1,6 +1,3 @@
-/Users/shuyangsun/Developer/cisc_601_final_project/numerical_integration_cpp/cmake-build-release/NumericalIntegration
-2020-08-05T18:43:38-04:00
-Running /Users/shuyangsun/Developer/cisc_601_final_project/numerical_integration_cpp/cmake-build-release/NumericalIntegration
 Run on (8 X 4000 MHz CPU s)
 CPU Caches:
   L1 Data 32 KiB (x4)

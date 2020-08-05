@@ -1,3 +1,4 @@
+import timeit
 from typing import Dict, Tuple
 import numpy as np
 
@@ -49,13 +50,25 @@ class Romberg:
         return res
 
 
-def func_1(x: float) -> float:
-    return x
-
-
-def func_2(x: float) -> float:
-    return x * x
-
-
-def func_3(x: float) -> float:
+def numeric_function(x: float) -> float:
     return x * x * x * 5 - 8
+
+
+def run_test(test_name: str, func_name: str, num_section: int) -> None:
+    setup_str = 'from integration import {0}, numeric_function'.format(func_name)
+    code_str = '{0}(numeric_function, {1}, 0.0, 5.0)'.format(func_name, num_section)
+    num_iter = 1000
+    duration_ns = timeit.timeit(code_str, setup=setup_str, number=num_iter) / num_iter * 1e+9
+    print('{0} {1}: {2:.2f}ns'.format(test_name, num_section, duration_ns))
+
+
+if __name__ == '__main__':
+    num_sections = (1, 2, 5, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100)
+    test_dict = {
+        'Trapezoidal': 'trapezoidal',
+        'Simpson 1/3': 'simpson_1_3',
+        'Simpson 3/8': 'simpson_3_8'
+    }
+    for name, f_name in test_dict.items():
+        for n in num_sections:
+            run_test(name, f_name, n)

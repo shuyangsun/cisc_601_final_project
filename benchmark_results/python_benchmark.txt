@@ -1,0 +1,40 @@
+numerical_integration_python/integration.py
+Trapezoidal 1: 1900.32ns
+Trapezoidal 2: 2928.04ns
+Trapezoidal 5: 5965.60ns
+Trapezoidal 10: 10752.21ns
+Trapezoidal 20: 20231.01ns
+Trapezoidal 30: 29265.49ns
+Trapezoidal 40: 38304.11ns
+Trapezoidal 50: 47349.93ns
+Trapezoidal 60: 58842.96ns
+Trapezoidal 70: 66558.35ns
+Trapezoidal 80: 74966.66ns
+Trapezoidal 90: 85046.68ns
+Trapezoidal 100: 92090.24ns
+Simpson 1/3 1: 1940.19ns
+Simpson 1/3 2: 3645.23ns
+Simpson 1/3 5: 7489.81ns
+Simpson 1/3 10: 13508.00ns
+Simpson 1/3 20: 25972.38ns
+Simpson 1/3 30: 40237.58ns
+Simpson 1/3 40: 52760.99ns
+Simpson 1/3 50: 63801.42ns
+Simpson 1/3 60: 77089.09ns
+Simpson 1/3 70: 90315.47ns
+Simpson 1/3 80: 103380.00ns
+Simpson 1/3 90: 115292.98ns
+Simpson 1/3 100: 131001.63ns
+Simpson 3/8 1: 2060.94ns
+Simpson 3/8 2: 3890.10ns
+Simpson 3/8 5: 7929.86ns
+Simpson 3/8 10: 14288.33ns
+Simpson 3/8 20: 27884.54ns
+Simpson 3/8 30: 39765.56ns
+Simpson 3/8 40: 53484.59ns
+Simpson 3/8 50: 64581.57ns
+Simpson 3/8 60: 77505.25ns
+Simpson 3/8 70: 95064.18ns
+Simpson 3/8 80: 102222.19ns
+Simpson 3/8 90: 119117.58ns
+Simpson 3/8 100: 128119.07ns
