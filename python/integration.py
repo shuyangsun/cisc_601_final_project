@@ -49,24 +49,13 @@ class Romberg:
         return res
 
 
-def relative_error(expected: float, actual: float) -> float:
-    return abs((expected - actual) / expected)
+def func_1(x: float) -> float:
+    return x
 
 
-def original_func(x: float) -> float:
-    return x * np.e ** (2 * x)
+def func_2(x: float) -> float:
+    return x * x
 
 
-def integral(x: float) -> float:
-    return np.e ** (2 * x) * (2 * x - 1) / 4
-
-
-if __name__ == '__main__':
-    analytical_result = integral(3) - integral(0)
-
-    print('Analytical = {:.2f}'.format(analytical_result))
-
-    romberg_calc = Romberg(original_func, 0, 3)
-    res = romberg_calc.calculate(10, 10)
-    print('Romberg Integration = {:.2f}, e_a={:.2f}, e_t={:.2f}%'.format(res, abs(analytical_result - res), relative_error(analytical_result, res) * 100))
-    print(simpson_1_3(original_func, 1000, 0, 3))
+def func_3(x: float) -> float:
+    return x * x * x * 5 - 8
