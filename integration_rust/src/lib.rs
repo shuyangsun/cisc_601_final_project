@@ -1,6 +1,14 @@
-pub fn trapezoidal(func: fn(f64) -> f64, n: u32, left: f64, right: f64) -> f64 {
-    let mut result = (func(left) + func(right)) / 2.0;
-    let delta = (right - left) / (n as f64);
+use num_traits::{Float, NumCast};
+use std::ops::AddAssign;
+
+trait MyFloat: Float + From<f32> + From<u32> {}
+
+pub fn trapezoidal<T>(func: fn(T) -> T, n: u32, left: T, right: T) -> T
+where
+    T: MyFloat + AddAssign<T>,
+{
+    let mut result: T = (func(left) + func(right)) * T::from(0.5f32).unwrap();
+    let delta = (right - left) / T::from(n).unwrap();
     let mut cur = left + delta;
     while cur < right {
         result += func(cur);

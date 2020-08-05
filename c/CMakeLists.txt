@@ -15,7 +15,7 @@ ADD_DEFINITIONS(${CPP_STANDARD_COMPILE_FLAGS})
 
 # add the executable
 INCLUDE_DIRECTORIES("include/")
-ADD_EXECUTABLE (NumericalIntegration src/main.cpp)
+ADD_EXECUTABLE (NumericalIntegration src/main.cpp include/numerical_integration/lib.hpp)
 TARGET_LINK_LIBRARIES (NumericalIntegration  ${EXTRA_LIBS})
 
 # add the install targets
