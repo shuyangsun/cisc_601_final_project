@@ -1,4 +1,5 @@
 use num_traits::{Float, NumCast};
+use std::collections::HashMap;
 use std::ops::AddAssign;
 
 pub trait IntegrationFloat: Float + From<f32> + From<u16> + AddAssign<Self> {}
@@ -62,15 +63,54 @@ where
     return delta * result * NumCast::from(3.0f32 / 8.0f32).unwrap();
 }
 
-pub fn romberg<T>(func: fn(T) -> T, j: u32, k: u32, left: T, right: T) -> T
+pub struct Romberg<T>
 where
     T: IntegrationFloat,
 {
-    if k <= 0 {
-        return trapezoidal(func, 2u16.pow(j), left, right);
+    func: fn(T) -> T,
+    left: T,
+    right: T,
+    cache: HashMap<(u32, u32), T>,
+}
+
+impl<T> Romberg<T>
+where
+    T: IntegrationFloat,
+{
+    pub fn from(func: fn(T) -> T, left: T, right: T) -> Self {
+        Self {
+            func,
+            left,
+            right,
+            cache: HashMap::new(),
+        }
     }
-    let four_pow_k: T = NumCast::from(4u32.pow(k)).unwrap();
-    return (four_pow_k * romberg(func, j, k - 1, left, right)
-        - romberg(func, j - 1, k - 1, left, right))
-        / (four_pow_k - NumCast::from(1.0f32).unwrap());
+
+    pub fn calculate(&mut self, j: u32, k: u32) -> T {
+        if k <= 0 {
+            let res = self.cache.get(&(0u32, 0u32));
+            match res {
+                Some(val) => *val,
+                None => {
+                    let trapezoidal_res =
+                        trapezoidal(self.func, 2u16.pow(j), self.left, self.right);
+                    self.cache.insert((0u32, 0u32), trapezoidal_res);
+                    trapezoidal_res
+                }
+            }
+        } else {
+            let res = self.cache.get(&(j, k));
+            match res {
+                Some(val) => *val,
+                None => {
+                    let four_pow_k: T = NumCast::from(4u32.pow(k)).unwrap();
+                    let cur_res = (four_pow_k * self.calculate(j, k - 1)
+                        - self.calculate(j - 1, k - 1))
+                        / (four_pow_k - NumCast::from(1.0f32).unwrap());
+                    self.cache.insert((j, k), cur_res);
+                    cur_res
+                }
+            }
+        }
+    }
 }

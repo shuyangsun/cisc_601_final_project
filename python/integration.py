@@ -1,3 +1,4 @@
+from typing import Dict, Tuple
 import numpy as np
 
 # Generic functions
@@ -27,21 +28,30 @@ def simpson_3_8(func, n: int, left: float, right: float) -> float:
     return delta * res * 3 / 8
 
 
-def romberg(func, j: int, k: int, left: float, right: float) -> float:
-    if k <= 0:
-        return trapezoidal(func, 2 ** j, left, right)
-    return (4 ** k * romberg(func, j, k - 1, left, right) - romberg(func, j - 1, k - 1, left, right)) / (4 ** k - 1)
+class Romberg:
+    def __init__(self, func, left: float, right: float) -> None:
+        self._func = func
+        self._left = left
+        self._right = right
+        self._cache: Dict[Tuple[int, int], float] = dict()
+
+    def calculate(self, j: int, k: int) -> float:
+        if k <= 0:
+            if (0, 0) in self._cache:
+                return self._cache[(0, 0)]
+            self._cache[(0, 0)] = trapezoidal(self._func, 2 ** j, self._left, self._right)
+            return self._cache[(0, 0)]
+        res = self._cache.get((j, k))
+        if res is not None:
+            return res
+        res = (4 ** k * self.calculate(j, k - 1) - self.calculate(j - 1, k - 1)) / (4 ** k - 1)
+        self._cache[(j, k)] = res
+        return res
 
 
 def relative_error(expected: float, actual: float) -> float:
     return abs((expected - actual) / expected)
 
-# Problem 22.1:
-# Integrate xe^(2x) from 0 to 3
-
-print('Problem 22.1:')
-
-# a). Analytically
 
 def original_func(x: float) -> float:
     return x * np.e ** (2 * x)
@@ -51,9 +61,12 @@ def integral(x: float) -> float:
     return np.e ** (2 * x) * (2 * x - 1) / 4
 
 
-analytical_result = integral(3) - integral(0)
+if __name__ == '__main__':
+    analytical_result = integral(3) - integral(0)
 
-print('Analytical = {:.2f}'.format(analytical_result))
+    print('Analytical = {:.2f}'.format(analytical_result))
 
-res = romberg(original_func, 3, 3, 0, 3)
-print('Romberg Integration = {:.2f}, e_a={:.2f}, e_t={:.2f}%'.format(res, abs(analytical_result - res), relative_error(analytical_result, res) * 100))
+    romberg_calc = Romberg(original_func, 0, 3)
+    res = romberg_calc.calculate(10, 10)
+    print('Romberg Integration = {:.2f}, e_a={:.2f}, e_t={:.2f}%'.format(res, abs(analytical_result - res), relative_error(analytical_result, res) * 100))
+    print(simpson_1_3(original_func, 1000, 0, 3))

@@ -8,6 +8,7 @@ where
 }
 
 fn main() {
-    let res = integration_rust::romberg(original_func, 10, 10, 0.0, 2.0);
+    let mut romberg_calc = integration_rust::Romberg::from(original_func, 0.0, 2.0);
+    let res = romberg_calc.calculate(10, 10);
     println!("{}", res);
 }
