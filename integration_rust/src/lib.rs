@@ -1,53 +1,76 @@
 use num_traits::{Float, NumCast};
 use std::ops::AddAssign;
 
-trait MyFloat: Float + From<f32> + From<u32> {}
+pub trait IntegrationFloat: Float + From<f32> + From<u16> + AddAssign<Self> {}
 
-pub fn trapezoidal<T>(func: fn(T) -> T, n: u32, left: T, right: T) -> T
+impl IntegrationFloat for f32 {}
+impl IntegrationFloat for f64 {}
+
+pub fn trapezoidal<T>(func: fn(T) -> T, n: u16, left: T, right: T) -> T
 where
-    T: MyFloat + AddAssign<T>,
+    T: IntegrationFloat,
 {
-    let mut result: T = (func(left) + func(right)) * T::from(0.5f32).unwrap();
-    let delta = (right - left) / T::from(n).unwrap();
-    let mut cur = left + delta;
+    let mut result: T = (func(left) + func(right)) * NumCast::from(0.5f32).unwrap();
+    let delta: T = (right - left) / NumCast::from(n).unwrap();
+    let mut cur: T = left + delta;
     while cur < right {
         result += func(cur);
         cur += delta;
     }
-    return result;
+    return result * delta;
 }
 
-pub fn simpson_1_3(func: fn(f64) -> f64, n: u32, left: f64, right: f64) -> f64 {
-    let mut result = (func(left) + func(right)) / 2.0;
-    let delta = (right - left) / (n as f64);
+pub fn simpson_1_3<T>(func: fn(T) -> T, n: u16, left: T, right: T) -> T
+where
+    T: IntegrationFloat,
+{
+    let mut result = (func(left) + func(right)) * NumCast::from(0.5f32).unwrap();
+    let delta: T = (right - left) / NumCast::from(n).unwrap();
     let mut i = 0usize;
-    let mut cur = left + delta;
+    let mut cur: T = left + delta;
     while cur < right {
-        result += func(cur) * if i % 2 == 0 { 4.0 } else { 2.0 };
+        result += func(cur)
+            * if i % 2 == 0 {
+                NumCast::from(4.0f32).unwrap()
+            } else {
+                NumCast::from(2.0f32).unwrap()
+            };
         i += 1;
         cur += delta;
     }
-    return delta * result / 3.0;
+    return delta * result / NumCast::from(3.0f32).unwrap();
 }
 
-pub fn simpson_3_8(func: fn(f64) -> f64, n: u32, left: f64, right: f64) -> f64 {
-    let mut result = (func(left) + func(right)) / 2.0;
-    let delta = (right - left) / (n as f64);
+pub fn simpson_3_8<T>(func: fn(T) -> T, n: u16, left: T, right: T) -> T
+where
+    T: IntegrationFloat,
+{
+    let mut result = (func(left) + func(right)) * NumCast::from(0.5f32).unwrap();
+    let delta: T = (right - left) / NumCast::from(n).unwrap();
     let mut i = 0usize;
-    let mut cur = left + delta;
+    let mut cur: T = left + delta;
     while cur < right {
-        result += func(cur) * if (i + 1) % 3 == 0 { 2.0 } else { 3.0 };
+        result += func(cur)
+            * if (i + 1) % 3 == 0 {
+                NumCast::from(2.0f32).unwrap()
+            } else {
+                NumCast::from(3.0f32).unwrap()
+            };
         i += 1;
         cur += delta;
     }
-    return delta * result / 3.0;
+    return delta * result * NumCast::from(3.0f32 / 8.0f32).unwrap();
 }
 
-pub fn romberg(func: fn(f64) -> f64, j: u32, k: u32, left: f64, right: f64) -> f64 {
+pub fn romberg<T>(func: fn(T) -> T, j: u32, k: u32, left: T, right: T) -> T
+where
+    T: IntegrationFloat,
+{
     if k <= 0 {
-        return trapezoidal(func, 2u32.pow(j), left, right);
+        return trapezoidal(func, 2u16.pow(j), left, right);
     }
-    return (4u32.pow(k) as f64 * romberg(func, j, k - 1, left, right)
+    let four_pow_k: T = NumCast::from(4u32.pow(k)).unwrap();
+    return (four_pow_k * romberg(func, j, k - 1, left, right)
         - romberg(func, j - 1, k - 1, left, right))
-        / (4u32.pow(k) as f64 - 1.0);
+        / (four_pow_k - NumCast::from(1.0f32).unwrap());
 }
