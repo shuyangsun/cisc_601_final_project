@@ -1,0 +1,399 @@
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
+
+Benchmarking f64/Trapezoidal/1
+Benchmarking f64/Trapezoidal/1: Warming up for 3.0000 s
+Benchmarking f64/Trapezoidal/1: Collecting 100 samples in estimated 5.0000 s (4.4B iterations)
+Benchmarking f64/Trapezoidal/1: Analyzing
+f64/Trapezoidal/1       time:   [1.1331 ns 1.1349 ns 1.1368 ns]
+                        change: [-0.3708% -0.0291% +0.3519%] (p = 0.88 > 0.05)
+                        No change in performance detected.
+Found 7 outliers among 100 measurements (7.00%)
+  2 (2.00%) low severe
+  1 (1.00%) low mild
+  3 (3.00%) high mild
+  1 (1.00%) high severe
+Benchmarking f64/Simpson's 1/3/1
+Benchmarking f64/Simpson's 1/3/1: Warming up for 3.0000 s
+Benchmarking f64/Simpson's 1/3/1: Collecting 100 samples in estimated 5.0000 s (2.5B iterations)
+Benchmarking f64/Simpson's 1/3/1: Analyzing
+f64/Simpson's 1/3/1     time:   [2.0159 ns 2.0177 ns 2.0198 ns]
+                        change: [-0.3232% -0.1259% +0.1001%] (p = 0.25 > 0.05)
+                        No change in performance detected.
+Found 5 outliers among 100 measurements (5.00%)
+  2 (2.00%) high mild
+  3 (3.00%) high severe
+Benchmarking f64/Simpson's 3/8/1
+Benchmarking f64/Simpson's 3/8/1: Warming up for 3.0000 s
+Benchmarking f64/Simpson's 3/8/1: Collecting 100 samples in estimated 5.0000 s (4.2B iterations)
+Benchmarking f64/Simpson's 3/8/1: Analyzing
+f64/Simpson's 3/8/1     time:   [1.1922 ns 1.1940 ns 1.1961 ns]
+                        change: [-0.1094% +0.1527% +0.4411%] (p = 0.27 > 0.05)
+                        No change in performance detected.
+Found 4 outliers among 100 measurements (4.00%)
+  2 (2.00%) high mild
+  2 (2.00%) high severe
+Benchmarking f64/Trapezoidal/2
+Benchmarking f64/Trapezoidal/2: Warming up for 3.0000 s
+Benchmarking f64/Trapezoidal/2: Collecting 100 samples in estimated 5.0000 s (1.9B iterations)
+Benchmarking f64/Trapezoidal/2: Analyzing
+f64/Trapezoidal/2       time:   [2.6127 ns 2.6171 ns 2.6216 ns]
+                        change: [-0.2556% +0.0007% +0.2537%] (p = 0.99 > 0.05)
+                        No change in performance detected.
+Found 5 outliers among 100 measurements (5.00%)
+  2 (2.00%) low mild
+  3 (3.00%) high mild
+Benchmarking f64/Simpson's 1/3/2
+Benchmarking f64/Simpson's 1/3/2: Warming up for 3.0000 s
+Benchmarking f64/Simpson's 1/3/2: Collecting 100 samples in estimated 5.0000 s (1.5B iterations)
+Benchmarking f64/Simpson's 1/3/2: Analyzing
+f64/Simpson's 1/3/2     time:   [3.2516 ns 3.2562 ns 3.2614 ns]
+                        change: [-0.5365% -0.1800% +0.1321%] (p = 0.31 > 0.05)
+                        No change in performance detected.
+Found 4 outliers among 100 measurements (4.00%)
+  2 (2.00%) high mild
+  2 (2.00%) high severe
+Benchmarking f64/Simpson's 3/8/2
+Benchmarking f64/Simpson's 3/8/2: Warming up for 3.0000 s
+Benchmarking f64/Simpson's 3/8/2: Collecting 100 samples in estimated 5.0000 s (1.5B iterations)
+Benchmarking f64/Simpson's 3/8/2: Analyzing
+f64/Simpson's 3/8/2     time:   [3.2574 ns 3.2637 ns 3.2701 ns]
+                        change: [-0.2531% +0.0269% +0.2966%] (p = 0.85 > 0.05)
+                        No change in performance detected.
+Benchmarking f64/Trapezoidal/5
+Benchmarking f64/Trapezoidal/5: Warming up for 3.0000 s
+Benchmarking f64/Trapezoidal/5: Collecting 100 samples in estimated 5.0000 s (278M iterations)
+Benchmarking f64/Trapezoidal/5: Analyzing
+f64/Trapezoidal/5       time:   [17.899 ns 17.918 ns 17.937 ns]
+                        change: [-0.2117% +0.0202% +0.2106%] (p = 0.86 > 0.05)
+                        No change in performance detected.
+Found 2 outliers among 100 measurements (2.00%)
+  2 (2.00%) high mild
+Benchmarking f64/Simpson's 1/3/5
+Benchmarking f64/Simpson's 1/3/5: Warming up for 3.0000 s
+Benchmarking f64/Simpson's 1/3/5: Collecting 100 samples in estimated 5.0000 s (629M iterations)
+Benchmarking f64/Simpson's 1/3/5: Analyzing
+f64/Simpson's 1/3/5     time:   [7.9168 ns 7.9291 ns 7.9423 ns]
+                        change: [-0.2950% -0.0485% +0.2389%] (p = 0.73 > 0.05)
+                        No change in performance detected.
+Found 14 outliers among 100 measurements (14.00%)
+  1 (1.00%) low severe
+  6 (6.00%) low mild
+  5 (5.00%) high mild
+  2 (2.00%) high severe
+Benchmarking f64/Simpson's 3/8/5
+Benchmarking f64/Simpson's 3/8/5: Warming up for 3.0000 s
+Benchmarking f64/Simpson's 3/8/5: Collecting 100 samples in estimated 5.0000 s (594M iterations)
+Benchmarking f64/Simpson's 3/8/5: Analyzing
+f64/Simpson's 3/8/5     time:   [8.4040 ns 8.4156 ns 8.4278 ns]
+                        change: [-0.3353% -0.0787% +0.1827%] (p = 0.55 > 0.05)
+                        No change in performance detected.
+Found 5 outliers among 100 measurements (5.00%)
+  4 (4.00%) low mild
+  1 (1.00%) high mild
+Benchmarking f64/Trapezoidal/10
+Benchmarking f64/Trapezoidal/10: Warming up for 3.0000 s
+Benchmarking f64/Trapezoidal/10: Collecting 100 samples in estimated 5.0001 s (202M iterations)
+Benchmarking f64/Trapezoidal/10: Analyzing
+f64/Trapezoidal/10      time:   [24.624 ns 24.655 ns 24.685 ns]
+                        change: [-0.0094% +0.2156% +0.4498%] (p = 0.07 > 0.05)
+                        No change in performance detected.
+Found 3 outliers among 100 measurements (3.00%)
+  1 (1.00%) low mild
+  1 (1.00%) high mild
+  1 (1.00%) high severe
+Benchmarking f64/Simpson's 1/3/10
+Benchmarking f64/Simpson's 1/3/10: Warming up for 3.0000 s
+Benchmarking f64/Simpson's 1/3/10: Collecting 100 samples in estimated 5.0001 s (315M iterations)
+Benchmarking f64/Simpson's 1/3/10: Analyzing
+f64/Simpson's 1/3/10    time:   [15.866 ns 15.894 ns 15.924 ns]
+                        change: [+0.0153% +0.2151% +0.4342%] (p = 0.04 < 0.05)
+                        Change within noise threshold.
+Found 5 outliers among 100 measurements (5.00%)
+  3 (3.00%) high mild
+  2 (2.00%) high severe
+Benchmarking f64/Simpson's 3/8/10
+Benchmarking f64/Simpson's 3/8/10: Warming up for 3.0000 s
+Benchmarking f64/Simpson's 3/8/10: Collecting 100 samples in estimated 5.0001 s (297M iterations)
+Benchmarking f64/Simpson's 3/8/10: Analyzing
+f64/Simpson's 3/8/10    time:   [16.799 ns 16.824 ns 16.849 ns]
+                        change: [-0.0860% +0.1047% +0.3047%] (p = 0.31 > 0.05)
+                        No change in performance detected.
+Found 6 outliers among 100 measurements (6.00%)
+  1 (1.00%) low mild
+  5 (5.00%) high mild
+Benchmarking f64/Trapezoidal/20
+Benchmarking f64/Trapezoidal/20: Warming up for 3.0000 s
+Benchmarking f64/Trapezoidal/20: Collecting 100 samples in estimated 5.0001 s (130M iterations)
+Benchmarking f64/Trapezoidal/20: Analyzing
+f64/Trapezoidal/20      time:   [38.453 ns 38.503 ns 38.553 ns]
+                        change: [-0.0313% +0.1288% +0.2924%] (p = 0.14 > 0.05)
+                        No change in performance detected.
+Found 2 outliers among 100 measurements (2.00%)
+  1 (1.00%) low mild
+  1 (1.00%) high severe
+Benchmarking f64/Simpson's 1/3/20
+Benchmarking f64/Simpson's 1/3/20: Warming up for 3.0000 s
+Benchmarking f64/Simpson's 1/3/20: Collecting 100 samples in estimated 5.0001 s (162M iterations)
+Benchmarking f64/Simpson's 1/3/20: Analyzing
+f64/Simpson's 1/3/20    time:   [30.829 ns 30.865 ns 30.907 ns]
+                        change: [-0.2037% -0.0530% +0.0952%] (p = 0.49 > 0.05)
+                        No change in performance detected.
+Found 6 outliers among 100 measurements (6.00%)
+  2 (2.00%) low mild
+  3 (3.00%) high mild
+  1 (1.00%) high severe
+Benchmarking f64/Simpson's 3/8/20
+Benchmarking f64/Simpson's 3/8/20: Warming up for 3.0000 s
+Benchmarking f64/Simpson's 3/8/20: Collecting 100 samples in estimated 5.0000 s (155M iterations)
+Benchmarking f64/Simpson's 3/8/20: Analyzing
+f64/Simpson's 3/8/20    time:   [32.300 ns 32.349 ns 32.404 ns]
+                        change: [-0.1661% +0.0143% +0.2089%] (p = 0.88 > 0.05)
+                        No change in performance detected.
+Found 8 outliers among 100 measurements (8.00%)
+  7 (7.00%) high mild
+  1 (1.00%) high severe
+Benchmarking f64/Trapezoidal/30
+Benchmarking f64/Trapezoidal/30: Warming up for 3.0000 s
+Benchmarking f64/Trapezoidal/30: Collecting 100 samples in estimated 5.0002 s (96M iterations)
+Benchmarking f64/Trapezoidal/30: Analyzing
+f64/Trapezoidal/30      time:   [51.971 ns 52.035 ns 52.104 ns]
+                        change: [-0.1691% -0.0239% +0.1124%] (p = 0.74 > 0.05)
+                        No change in performance detected.
+Found 2 outliers among 100 measurements (2.00%)
+  2 (2.00%) high mild
+Benchmarking f64/Simpson's 1/3/30
+Benchmarking f64/Simpson's 1/3/30: Warming up for 3.0000 s
+Benchmarking f64/Simpson's 1/3/30: Collecting 100 samples in estimated 5.0001 s (100M iterations)
+Benchmarking f64/Simpson's 1/3/30: Analyzing
+f64/Simpson's 1/3/30    time:   [49.141 ns 49.854 ns 50.565 ns]
+                        change: [-5.1753% -3.1789% -1.1237%] (p = 0.00 < 0.05)
+                        Performance has improved.
+Benchmarking f64/Simpson's 3/8/30
+Benchmarking f64/Simpson's 3/8/30: Warming up for 3.0000 s
+Benchmarking f64/Simpson's 3/8/30: Collecting 100 samples in estimated 5.0001 s (99M iterations)
+Benchmarking f64/Simpson's 3/8/30: Analyzing
+f64/Simpson's 3/8/30    time:   [50.690 ns 51.214 ns 51.748 ns]
+                        change: [-0.3602% +1.0633% +2.3737%] (p = 0.15 > 0.05)
+                        No change in performance detected.
+Benchmarking f64/Trapezoidal/40
+Benchmarking f64/Trapezoidal/40: Warming up for 3.0000 s
+Benchmarking f64/Trapezoidal/40: Collecting 100 samples in estimated 5.0002 s (76M iterations)
+Benchmarking f64/Trapezoidal/40: Analyzing
+f64/Trapezoidal/40      time:   [65.338 ns 65.400 ns 65.462 ns]
+                        change: [-1.5929% -1.2164% -0.8803%] (p = 0.00 < 0.05)
+                        Change within noise threshold.
+Found 3 outliers among 100 measurements (3.00%)
+  2 (2.00%) high mild
+  1 (1.00%) high severe
+Benchmarking f64/Simpson's 1/3/40
+Benchmarking f64/Simpson's 1/3/40: Warming up for 3.0000 s
+Benchmarking f64/Simpson's 1/3/40: Collecting 100 samples in estimated 5.0002 s (82M iterations)
+Benchmarking f64/Simpson's 1/3/40: Analyzing
+f64/Simpson's 1/3/40    time:   [61.298 ns 61.374 ns 61.459 ns]
+                        change: [-0.4769% -0.2829% -0.0998%] (p = 0.00 < 0.05)
+                        Change within noise threshold.
+Found 8 outliers among 100 measurements (8.00%)
+  6 (6.00%) high mild
+  2 (2.00%) high severe
+Benchmarking f64/Simpson's 3/8/40
+Benchmarking f64/Simpson's 3/8/40: Warming up for 3.0000 s
+Benchmarking f64/Simpson's 3/8/40: Collecting 100 samples in estimated 5.0002 s (80M iterations)
+Benchmarking f64/Simpson's 3/8/40: Analyzing
+f64/Simpson's 3/8/40    time:   [62.645 ns 62.720 ns 62.803 ns]
+                        change: [-0.1817% +0.0562% +0.3569%] (p = 0.70 > 0.05)
+                        No change in performance detected.
+Found 9 outliers among 100 measurements (9.00%)
+  1 (1.00%) low mild
+  4 (4.00%) high mild
+  4 (4.00%) high severe
+Benchmarking f64/Trapezoidal/50
+Benchmarking f64/Trapezoidal/50: Warming up for 3.0000 s
+Benchmarking f64/Trapezoidal/50: Collecting 100 samples in estimated 5.0003 s (62M iterations)
+Benchmarking f64/Trapezoidal/50: Analyzing
+f64/Trapezoidal/50      time:   [80.900 ns 80.981 ns 81.065 ns]
+                        change: [-0.1930% +0.0331% +0.2707%] (p = 0.78 > 0.05)
+                        No change in performance detected.
+Found 5 outliers among 100 measurements (5.00%)
+  1 (1.00%) low severe
+  1 (1.00%) low mild
+  3 (3.00%) high severe
+Benchmarking f64/Simpson's 1/3/50
+Benchmarking f64/Simpson's 1/3/50: Warming up for 3.0000 s
+Benchmarking f64/Simpson's 1/3/50: Collecting 100 samples in estimated 5.0003 s (64M iterations)
+Benchmarking f64/Simpson's 1/3/50: Analyzing
+f64/Simpson's 1/3/50    time:   [77.885 ns 77.953 ns 78.025 ns]
+                        change: [-0.2592% -0.0715% +0.1156%] (p = 0.47 > 0.05)
+                        No change in performance detected.
+Found 4 outliers among 100 measurements (4.00%)
+  2 (2.00%) high mild
+  2 (2.00%) high severe
+Benchmarking f64/Simpson's 3/8/50
+Benchmarking f64/Simpson's 3/8/50: Warming up for 3.0000 s
+Benchmarking f64/Simpson's 3/8/50: Collecting 100 samples in estimated 5.0003 s (63M iterations)
+Benchmarking f64/Simpson's 3/8/50: Analyzing
+f64/Simpson's 3/8/50    time:   [79.145 ns 79.236 ns 79.337 ns]
+                        change: [-0.2979% -0.1351% +0.0207%] (p = 0.10 > 0.05)
+                        No change in performance detected.
+Found 9 outliers among 100 measurements (9.00%)
+  8 (8.00%) high mild
+  1 (1.00%) high severe
+Benchmarking f64/Trapezoidal/60
+Benchmarking f64/Trapezoidal/60: Warming up for 3.0000 s
+Benchmarking f64/Trapezoidal/60: Collecting 100 samples in estimated 5.0003 s (53M iterations)
+Benchmarking f64/Trapezoidal/60: Analyzing
+f64/Trapezoidal/60      time:   [94.217 ns 94.341 ns 94.468 ns]
+                        change: [-0.1202% +0.0686% +0.2712%] (p = 0.52 > 0.05)
+                        No change in performance detected.
+Found 3 outliers among 100 measurements (3.00%)
+  1 (1.00%) low mild
+  2 (2.00%) high mild
+Benchmarking f64/Simpson's 1/3/60
+Benchmarking f64/Simpson's 1/3/60: Warming up for 3.0000 s
+Benchmarking f64/Simpson's 1/3/60: Collecting 100 samples in estimated 5.0004 s (48M iterations)
+Benchmarking f64/Simpson's 1/3/60: Analyzing
+f64/Simpson's 1/3/60    time:   [103.70 ns 103.92 ns 104.13 ns]
+                        change: [-0.4808% -0.0544% +0.3090%] (p = 0.79 > 0.05)
+                        No change in performance detected.
+Found 5 outliers among 100 measurements (5.00%)
+  2 (2.00%) low mild
+  3 (3.00%) high mild
+Benchmarking f64/Simpson's 3/8/60
+Benchmarking f64/Simpson's 3/8/60: Warming up for 3.0000 s
+Benchmarking f64/Simpson's 3/8/60: Collecting 100 samples in estimated 5.0003 s (49M iterations)
+Benchmarking f64/Simpson's 3/8/60: Analyzing
+f64/Simpson's 3/8/60    time:   [102.02 ns 102.16 ns 102.31 ns]
+                        change: [-0.4776% -0.1239% +0.1871%] (p = 0.49 > 0.05)
+                        No change in performance detected.
+Found 2 outliers among 100 measurements (2.00%)
+  2 (2.00%) high mild
+Benchmarking f64/Trapezoidal/70
+Benchmarking f64/Trapezoidal/70: Warming up for 3.0000 s
+Benchmarking f64/Trapezoidal/70: Collecting 100 samples in estimated 5.0001 s (47M iterations)
+Benchmarking f64/Trapezoidal/70: Analyzing
+f64/Trapezoidal/70      time:   [106.82 ns 107.03 ns 107.23 ns]
+                        change: [-0.2345% +0.0663% +0.4130%] (p = 0.71 > 0.05)
+                        No change in performance detected.
+Found 3 outliers among 100 measurements (3.00%)
+  1 (1.00%) low mild
+  1 (1.00%) high mild
+  1 (1.00%) high severe
+Benchmarking f64/Simpson's 1/3/70
+Benchmarking f64/Simpson's 1/3/70: Warming up for 3.0000 s
+Benchmarking f64/Simpson's 1/3/70: Collecting 100 samples in estimated 5.0004 s (43M iterations)
+Benchmarking f64/Simpson's 1/3/70: Analyzing
+f64/Simpson's 1/3/70    time:   [116.88 ns 117.16 ns 117.45 ns]
+                        change: [-0.3262% +0.0371% +0.3887%] (p = 0.84 > 0.05)
+                        No change in performance detected.
+Found 1 outliers among 100 measurements (1.00%)
+  1 (1.00%) high mild
+Benchmarking f64/Simpson's 3/8/70
+Benchmarking f64/Simpson's 3/8/70: Warming up for 3.0000 s
+Benchmarking f64/Simpson's 3/8/70: Collecting 100 samples in estimated 5.0003 s (43M iterations)
+Benchmarking f64/Simpson's 3/8/70: Analyzing
+f64/Simpson's 3/8/70    time:   [115.92 ns 116.12 ns 116.32 ns]
+                        change: [-0.3904% -0.0472% +0.2882%] (p = 0.79 > 0.05)
+                        No change in performance detected.
+Found 10 outliers among 100 measurements (10.00%)
+  5 (5.00%) low mild
+  2 (2.00%) high mild
+  3 (3.00%) high severe
+Benchmarking f64/Trapezoidal/80
+Benchmarking f64/Trapezoidal/80: Warming up for 3.0000 s
+Benchmarking f64/Trapezoidal/80: Collecting 100 samples in estimated 5.0006 s (42M iterations)
+Benchmarking f64/Trapezoidal/80: Analyzing
+f64/Trapezoidal/80      time:   [120.36 ns 120.51 ns 120.66 ns]
+                        change: [-0.3552% -0.1595% +0.0168%] (p = 0.11 > 0.05)
+                        No change in performance detected.
+Found 6 outliers among 100 measurements (6.00%)
+  4 (4.00%) high mild
+  2 (2.00%) high severe
+Benchmarking f64/Simpson's 1/3/80
+Benchmarking f64/Simpson's 1/3/80: Warming up for 3.0000 s
+Benchmarking f64/Simpson's 1/3/80: Collecting 100 samples in estimated 5.0001 s (37M iterations)
+Benchmarking f64/Simpson's 1/3/80: Analyzing
+f64/Simpson's 1/3/80    time:   [135.28 ns 135.44 ns 135.62 ns]
+                        change: [-0.4004% -0.2607% -0.1162%] (p = 0.00 < 0.05)
+                        Change within noise threshold.
+Found 6 outliers among 100 measurements (6.00%)
+  5 (5.00%) high mild
+  1 (1.00%) high severe
+Benchmarking f64/Simpson's 3/8/80
+Benchmarking f64/Simpson's 3/8/80: Warming up for 3.0000 s
+Benchmarking f64/Simpson's 3/8/80: Collecting 100 samples in estimated 5.0005 s (38M iterations)
+Benchmarking f64/Simpson's 3/8/80: Analyzing
+f64/Simpson's 3/8/80    time:   [131.64 ns 131.80 ns 131.97 ns]
+                        change: [-0.8644% -0.6079% -0.3696%] (p = 0.00 < 0.05)
+                        Change within noise threshold.
+Found 3 outliers among 100 measurements (3.00%)
+  1 (1.00%) low mild
+  1 (1.00%) high mild
+  1 (1.00%) high severe
+Benchmarking f64/Trapezoidal/90
+Benchmarking f64/Trapezoidal/90: Warming up for 3.0000 s
+Benchmarking f64/Trapezoidal/90: Collecting 100 samples in estimated 5.0003 s (37M iterations)
+Benchmarking f64/Trapezoidal/90: Analyzing
+f64/Trapezoidal/90      time:   [135.54 ns 135.66 ns 135.80 ns]
+                        change: [-0.1004% +0.0662% +0.2420%] (p = 0.45 > 0.05)
+                        No change in performance detected.
+Found 5 outliers among 100 measurements (5.00%)
+  1 (1.00%) low mild
+  2 (2.00%) high mild
+  2 (2.00%) high severe
+Benchmarking f64/Simpson's 1/3/90
+Benchmarking f64/Simpson's 1/3/90: Warming up for 3.0000 s
+Benchmarking f64/Simpson's 1/3/90: Collecting 100 samples in estimated 5.0004 s (33M iterations)
+Benchmarking f64/Simpson's 1/3/90: Analyzing
+f64/Simpson's 1/3/90    time:   [152.42 ns 152.65 ns 152.92 ns]
+                        change: [+0.1857% +0.4007% +0.6229%] (p = 0.00 < 0.05)
+                        Change within noise threshold.
+Found 10 outliers among 100 measurements (10.00%)
+  7 (7.00%) high mild
+  3 (3.00%) high severe
+Benchmarking f64/Simpson's 3/8/90
+Benchmarking f64/Simpson's 3/8/90: Warming up for 3.0000 s
+Benchmarking f64/Simpson's 3/8/90: Collecting 100 samples in estimated 5.0005 s (34M iterations)
+Benchmarking f64/Simpson's 3/8/90: Analyzing
+f64/Simpson's 3/8/90    time:   [148.35 ns 148.51 ns 148.68 ns]
+                        change: [-0.7819% -0.4827% -0.2019%] (p = 0.00 < 0.05)
+                        Change within noise threshold.
+Found 7 outliers among 100 measurements (7.00%)
+  3 (3.00%) low mild
+  3 (3.00%) high mild
+  1 (1.00%) high severe
+Benchmarking f64/Trapezoidal/100
+Benchmarking f64/Trapezoidal/100: Warming up for 3.0000 s
+Benchmarking f64/Trapezoidal/100: Collecting 100 samples in estimated 5.0006 s (33M iterations)
+Benchmarking f64/Trapezoidal/100: Analyzing
+f64/Trapezoidal/100     time:   [149.25 ns 149.39 ns 149.54 ns]
+                        change: [-0.0564% +0.0933% +0.2526%] (p = 0.23 > 0.05)
+                        No change in performance detected.
+Found 4 outliers among 100 measurements (4.00%)
+  1 (1.00%) low mild
+  3 (3.00%) high mild
+Benchmarking f64/Simpson's 1/3/100
+Benchmarking f64/Simpson's 1/3/100: Warming up for 3.0000 s
+Benchmarking f64/Simpson's 1/3/100: Collecting 100 samples in estimated 5.0002 s (30M iterations)
+Benchmarking f64/Simpson's 1/3/100: Analyzing
+f64/Simpson's 1/3/100   time:   [167.89 ns 168.05 ns 168.21 ns]
+Found 4 outliers among 100 measurements (4.00%)
+  1 (1.00%) low mild
+  3 (3.00%) high mild
+Benchmarking f64/Simpson's 3/8/100
+Benchmarking f64/Simpson's 3/8/100: Warming up for 3.0000 s
+Benchmarking f64/Simpson's 3/8/100: Collecting 100 samples in estimated 5.0004 s (31M iterations)
+Benchmarking f64/Simpson's 3/8/100: Analyzing
+f64/Simpson's 3/8/100   time:   [162.34 ns 162.53 ns 162.73 ns]
+Found 11 outliers among 100 measurements (11.00%)
+  1 (1.00%) low severe
+  3 (3.00%) low mild
+  2 (2.00%) high mild
+  5 (5.00%) high severe
+
